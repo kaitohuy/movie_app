@@ -1,0 +1,51 @@
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Trống" android:layout_marginStart="8dp" android:layout_marginEnd="16dp"/>
+
+            <View android:layout_width="16dp" android:layout_height="16dp" android:background="#388E3C"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đang chọn" android:layout_marginStart="8dp" android:layout_marginEnd="16dp"/>
+
+            <View android:layout_width="16dp" android:layout_height="16dp" android:background="#D32F2F"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đã đặt" android:layout_marginStart="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvSelectedSeats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chưa chọn ghế"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 VNĐ"
+                android:textColor="#E65100"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConfirmBooking"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:text="MUA VÉ"
+            android:enabled="false"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+</RelativeLayout>
