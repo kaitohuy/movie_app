@@ -65,7 +65,8 @@ public class MovieDetailActivity extends AppCompatActivity {
 
             if (currentMovie.imageUrl != null) {
                 int resId = getResources().getIdentifier(currentMovie.imageUrl, "drawable", getPackageName());
-                if (resId != 0) imgMovieCover.setImageResource(resId);
+                if (resId != 0)
+                    imgMovieCover.setImageResource(resId);
             }
         }
     }
@@ -101,10 +102,10 @@ public class MovieDetailActivity extends AppCompatActivity {
     private void goToBookTicket(int showTimeId) {
         // TODO: Phần 5 sẽ làm màn hình chọn ghế
         Toast.makeText(this, "Chuyển sang màn hình chọn ghế (Phần sau)", Toast.LENGTH_SHORT).show();
-        /*
+
         Intent intent = new Intent(this, BookTicketActivity.class);
         intent.putExtra("SHOWTIME_ID", showTimeId);
         startActivity(intent);
-        */
+
     }
 }
