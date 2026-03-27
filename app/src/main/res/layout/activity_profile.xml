@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#F4F6F9"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:src="@android:drawable/ic_menu_revert"
+        app:tint="#2C3E50" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_menu_myplaces"
+                app:tint="#1565C0"/>
+
+            <TextView
+                android:id="@+id/tvFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Họ và Tên"
+                android:textAlignment="center"
+                android:textColor="#212121"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\@username"
+                android:textAlignment="center"
+                android:textColor="#757575"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="16dp"
+                android:background="#E0E0E0" />
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SĐT: 0123456789"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="ĐĂNG XUẤT"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#D32F2F"
+        app:cornerRadius="8dp" />
+
+</LinearLayout>
