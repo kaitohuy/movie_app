@@ -74,19 +74,18 @@ public class HomeActivity extends AppCompatActivity {
                 return true;
 
             } else if (itemId == R.id.nav_ticket) {
-                // TODO: Chuyển sang màn hình Lịch sử đặt vé (TicketActivity)
-                Toast.makeText(this, "Chức năng Vé sẽ làm ở phần sau!", Toast.LENGTH_SHORT).show();
-                return false;
-
-            } else if (itemId == R.id.nav_profile) {
-                // TODO: Chuyển sang Login hoặc Profile
-                Toast.makeText(this, "Chức năng Tôi sẽ làm ở phần sau!", Toast.LENGTH_SHORT).show();
-                return false;
-            } else if (itemId == R.id.nav_ticket) {
                 if (prefsHelper.isLoggedIn()) {
                     startActivity(new Intent(this, TicketActivity.class));
                 } else {
                     Toast.makeText(this, "Vui lòng đăng nhập để xem vé", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(this, LoginActivity.class));
+                }
+                return false;
+
+            } else if (itemId == R.id.nav_profile) {
+                if (prefsHelper.isLoggedIn()) {
+                    startActivity(new Intent(this, ProfileActivity.class));
+                } else {
                     startActivity(new Intent(this, LoginActivity.class));
                 }
                 return false;
